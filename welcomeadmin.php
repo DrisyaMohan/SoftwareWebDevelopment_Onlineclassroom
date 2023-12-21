@@ -1,0 +1,52 @@
+<?php
+session_start();
+
+if ( $_SESSION[ "umail" ] == "" || $_SESSION[ "umail" ] == NULL ) {
+	header( 'Location:AdminLogin.php' );
+}
+$userid = $_SESSION[ "umail" ];
+?>
+<!DOCTYPE  HTML>
+<?php include('adminhead.php'); ?>
+
+<html>
+
+<head>
+    <!-- Include the JavaScript code for session timeout -->
+    <script>
+        var timeoutInMinutes = 3;
+
+        function startSessionTimer() {
+            setTimeout(function () {
+                window.location.href = 'logoutadmin.php';
+            }, timeoutInMinutes * 60 * 1000);
+        }
+
+        document.addEventListener('mousemove', function () {
+            clearTimeout(sessionTimer);
+            startSessionTimer();
+        });
+
+        var sessionTimer = startSessionTimer();
+    </script>
+</head>
+
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<!--Welcome page for admin-->
+			<h3> Welcome <a href="welcomeadmin">Admin</a></h3>
+			
+			<a href="studentdetails"><button  href="" type="submit" class="btn btn-success" style="border-radius:0%"><i class="fa fa-graduation-cap"></i> Student Details</button></a>
+
+			<a href="facultydetails"><button  href="" type="submit" class="btn btn-success" style="border-radius:0%"><i class="fa fa-users"></i> Faculty Details</button></a>
+
+			<a href="guestdetails"><button  href="" type="submit" class="btn btn-success" style="border-radius:0%"><i class="fa fa-user"></i> Guest Details</button></a>
+
+			<a href="logoutadmin"><button  href="" type="submit" class="btn btn-danger" style="border-radius:0%">Logout</button></a>
+
+		</div>
+	</div>
+	<?php include('allfoot.php'); ?>

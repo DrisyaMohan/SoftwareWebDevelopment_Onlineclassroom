@@ -1,0 +1,25 @@
+**Log on to codeastro.com for more projects!***
+
+**Database Name: onlclassroom**
+
+**Developed by Vishal Mathur**
+
+**Recommended PHP Version 5.6 or Newer**
+
+
+**Admin Login Details**
+
+Username: admin
+Password: Maya@123
+
+**Student Login Details**
+
+Email   : misha@gmail.com
+Password: Misha@123
+
+**Faculty Login Details**
+
+ID      : 120
+Password: Maya@123
+
+
